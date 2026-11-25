@@ -4,7 +4,7 @@
   "description": "Standar engineering universal untuk AI coding agents (Antigravity, Claude Code, Cursor, Codex) pada repo tanpa AGENTS.md.",
   "type": "module",
   "bin": {
-    "dev-rules-ai": "./bin/cli.mjs"
+    "dev-rules-ai": "bin/cli.mjs"
   },
   "files": [
     "bin/",
@@ -31,7 +31,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dhianharyono/dev-rules.git"
+    "url": "git+https://github.com/dhianharyono/dev-rules.git"
   },
   "engines": {
     "node": ">=18.0.0"
