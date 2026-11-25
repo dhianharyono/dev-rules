@@ -117,6 +117,31 @@ git clone https://github.com/dhianharyono/dev-rules.git ~/.gemini/config/plugins
 
 ---
 
+## Uninstall
+
+### Via CLI *(Direkomendasikan)*
+
+```bash
+# Interaktif (pilih agent & scope yang ingin dihapus)
+npx dev-rules-ai --uninstall
+
+# Non-interaktif: hapus dari Antigravity global
+npx dev-rules-ai --uninstall --agent antigravity --scope global
+
+# Hapus dari semua agent pada project saat ini
+npx dev-rules-ai --uninstall --agent all --scope project
+```
+
+### Manual
+
+Hapus direktori sesuai agent dan scope yang dipakai (lihat tabel [Agent & Lokasi Instalasi](#agent--lokasi-instalasi)), misalnya:
+
+```bash
+rm -rf ~/.gemini/config/plugins/dev-rules
+```
+
+---
+
 ## Struktur Repositori
 
 ```text
