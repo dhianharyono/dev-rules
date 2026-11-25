@@ -1,0 +1,16 @@
+{
+  "name": "dev-rules",
+  "displayName": "Dev Rules",
+  "version": "1.0.0",
+  "description": "Standar engineering universal untuk repo tanpa AGENTS.md (modularitas, type safety multi-stack, negative cases, keamanan SQL, zero test debt, dan conventional commits).",
+  "author": {
+    "name": "Dhian Haryono",
+    "url": "https://github.com/dhianharyono"
+  },
+  "repository": "https://github.com/dhianharyono/dev-rules",
+  "suggestedPrompts": [
+    "Terapkan /dev-rules untuk meninjau struktur modul baru ini",
+    "Buatkan rencana implementasi fitur sesuai standar /dev-rules",
+    "Audit perubahan git saya terhadap quality gate /dev-rules"
+  ]
+}

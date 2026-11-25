@@ -1,0 +1,12 @@
+{
+  "name": "dev-rules",
+  "version": "1.0.0",
+  "description": "Standar engineering universal untuk repo tanpa aturan proyek (AGENTS.md/CLAUDE.md): modularitas, type safety multi-stack, negative cases, keamanan SQL, zero test debt, dan conventional commits.",
+  "author": {
+    "name": "Dhian Haryono",
+    "url": "https://github.com/dhianharyono"
+  },
+  "repository": "https://github.com/dhianharyono/dev-rules",
+  "license": "MIT",
+  "skills": "./skills/"
+}
