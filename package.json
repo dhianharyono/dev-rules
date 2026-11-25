@@ -1,0 +1,39 @@
+{
+  "name": "dev-rules-ai",
+  "version": "1.0.0",
+  "description": "Standar engineering universal untuk AI coding agents (Antigravity, Claude Code, Cursor, Codex) pada repo tanpa AGENTS.md.",
+  "type": "module",
+  "bin": {
+    "dev-rules-ai": "./bin/cli.mjs"
+  },
+  "files": [
+    "bin/",
+    "plugin.json",
+    ".claude-plugin/",
+    "skills/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  },
+  "keywords": [
+    "ai",
+    "agent-skills",
+    "antigravity",
+    "claude-code",
+    "cursor",
+    "codex",
+    "engineering-standards",
+    "dev-rules"
+  ],
+  "author": "Dhian Haryono",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhianharyono/dev-rules.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

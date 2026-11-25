@@ -1,6 +1,6 @@
 # dev-rules
 
-Standar engineering universal lintas-agent (**Antigravity**, **Claude Code**, **Cursor**, **Codex**, **Cline**, dll.) untuk repositori **tanpa** file aturan proyek (`AGENTS.md` / `CLAUDE.md` / `.cursorrules`).
+Standar engineering universal lintas-agent (**Antigravity**, **Claude Code**, **Cursor**, **Codex**) untuk repositori **tanpa** file aturan proyek (`AGENTS.md` / `CLAUDE.md` / `.cursorrules`).
 
 > **Otomatis dilewati bila repo sudah punya aturan:** `dev-rules` memiliki *guard clause* bawaan agar tidak bentrok dengan aturan proyek dan tidak memboroskan konteks token.
 
@@ -21,47 +21,42 @@ Standar engineering universal lintas-agent (**Antigravity**, **Claude Code**, **
 
 ## Cara Instalasi
 
-### 1. Universal via `skills.sh` *(Direkomendasikan untuk tim lintas-agent)*
+### 1. Interactive CLI *(Direkomendasikan — tanpa prefix username)*
 
-Mendukung Antigravity, Claude Code, Cursor, Codex, Cline, dan agent lain yang mengadopsi standar Agent Skills:
+```bash
+npx dev-rules-ai
+```
+
+Atau langsung non-interaktif dengan flag:
+
+```bash
+# Install global untuk Antigravity
+npx dev-rules-ai --agent antigravity --scope global
+
+# Install di project saat ini untuk semua agent
+npx dev-rules-ai --agent all --scope project
+
+# Hapus instalasi
+npx dev-rules-ai --uninstall --agent antigravity --scope global
+```
+
+### 2. Via `skills.sh`
 
 ```bash
 npx skills add dhianharyono/dev-rules
 ```
 
-### 2. Antigravity (Native Plugin)
-
-Clone ke direktori plugin global Antigravity:
+### 3. Manual (Antigravity Plugin via Git)
 
 ```bash
 git clone https://github.com/dhianharyono/dev-rules.git ~/.gemini/config/plugins/dev-rules
-```
-
-Atau buat symlink jika ingin mengelola dari folder kerja lokal:
-
-```bash
-ln -s "/path/ke/dev-rules" ~/.gemini/config/plugins/dev-rules
-```
-
-### 3. Claude Code
-
-```bash
-/plugin install dhianharyono/dev-rules
-```
-
-### 4. Update
-
-Jika di-install via `git clone`, cukup jalankan:
-
-```bash
-git -C ~/.gemini/config/plugins/dev-rules pull
 ```
 
 ---
 
 ## Cara Pemakaian
 
-- **Otomatis:** Agent akan membaca deskripsi skill dan mengaktifkannya saat bekerja di repo yang belum memiliki `AGENTS.md` / `CLAUDE.md`.
+- **Otomatis:** Agent membaca deskripsi skill dan mengaktifkannya saat bekerja di repo yang belum memiliki `AGENTS.md` / `CLAUDE.md`.
 - **Eksplisit:** Panggil langsung dengan `/dev-rules` pada prompt.
 
 ---
@@ -70,6 +65,12 @@ git -C ~/.gemini/config/plugins/dev-rules pull
 
 ```text
 dev-rules/
+├── package.json                   # Konfigurasi paket npm (npx dev-rules-ai)
+├── bin/
+│   ├── cli.mjs                    # Entry point CLI interaktif & flags
+│   └── installer.mjs              # Logika instalasi lintas-agent
+├── tests/
+│   └── installer.test.mjs         # Unit tests (node --test)
 ├── plugin.json                    # Manifest Antigravity
 ├── .claude-plugin/
 │   └── plugin.json                # Manifest Claude Code
