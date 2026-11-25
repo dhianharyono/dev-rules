@@ -1,6 +1,6 @@
 {
   "name": "dev-rules-ai",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Standar engineering universal untuk AI coding agents (Antigravity, Claude Code, Cursor, Codex) pada repo tanpa AGENTS.md.",
   "type": "module",
   "bin": {
